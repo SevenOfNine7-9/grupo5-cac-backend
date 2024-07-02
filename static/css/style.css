@@ -1,0 +1,411 @@
+:root{
+    --primary-color: rgb(155, 63, 112);
+    --secondary-color:  rgb(242, 201, 201);
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+    font-family: Arial, Helvetica, sans-serif; 
+    width: 100%;
+    height: 100vh;
+    background-color:#f2f2f2;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: var(--primary-color);
+    padding: 2vh 0;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    margin-left: 6px;
+    margin-bottom: 1px;
+    border: rgb(155, 63, 112);
+   
+}
+
+.logo img{
+    height: 100px;
+}
+
+.container h1{
+    color: #f2f2f2;
+    font-size: 3.5rem;
+}
+
+.container h2{
+    color: #f2f2f2;
+    font-size: 1.5rem;
+}
+
+.recetas-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+
+.card{
+    width: 1200px;
+    height: auto;
+    background: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 5px 10px rgb(155, 63, 112);
+    border-radius: 25px;
+    justify-content: space-between;
+}
+
+.card-content{
+    display: flex;   
+}
+
+.card .card-img{
+    width: 40%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.card .card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+
+.card-text{
+    width: 50%;
+}
+
+
+.titulo h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: rgb(112, 46, 81);
+    text-align: center;
+}
+
+.card-text p{
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+
+/*Banner*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    animation: banner 15s infinite linear alternate;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+@keyframes banner {
+    0%, 20%{
+    background-image: url('../img/backeryCover.jpg');
+    }
+  
+    25%, 45%{
+    background-image: url('../img/banner.jpg');
+    }
+    50%, 70%{
+    background-image: url('../img/banner3.jpg');
+    }
+    75%, 100%{
+    background-image: url('../img/benner4.jpg');
+    }
+}
+  
+
+  
+.titulo{
+    /*width: 100%;*/
+    max-width: 90rem;
+    text-align: center;
+    padding: 8rem 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+  
+.titulo a{
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    font-size: 26px;
+    text-decoration: none;
+    color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px 40px;
+    display: inline-block;
+    white-space: nowrap;
+}
+  
+.titulo a:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.galeria{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
+}
+
+
+.recetas-card{
+    background: #f2f2f2;
+    margin: 30px 10px;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+}
+.a-card{
+    background: #f2f2f2;
+    margin: 30px 10px;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+}
+
+.recetas-card img{
+   width: 100%;
+   height: 200px;
+   padding: 10px;
+   object-fit: cover;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.a-card a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--primary-color);
+    color: #f2f2f2;
+    padding: 15px 0;
+    border-radius: 2ch;
+    font-size: 1em;
+}
+
+.a-card a:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+table{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--primary-color);
+    color: #f2f2f2;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px;
+    background-color: rgb(155, 63, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: solid;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:   rgb(242, 201, 201);
+}
+
+
+form a {
+    padding: 10px 20px;
+    background-color: rgb(155, 63, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: solid;
+    cursor: pointer;
+}
+
+form a:hover {
+    background-color:   rgb(242, 201, 201);
+}
+
+#app a{
+    padding: 10px 20px;
+    background-color: rgb(155, 63, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: solid;
+    cursor: pointer;
+}
+
+#app a:hover{
+    background-color:   rgb(242, 201, 201);   
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card .card-img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .card-text {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-text h4 {
+        font-size: 20px;
+    }
+
+    .card-text p {
+        font-size: 14px;
+    }
+}
+
+footer{
+    background-color: var(--primary-color);
+    height: 10vh;
+    /*Damos propiedad de flexible al padre*/
+    display: flex;
+    justify-content: center; /*centra horizontalmente los elementos*/
+    align-items: center; /*centra verticalemente los elementos*/
+    
+}
+
+.nav-footer ul{
+    list-style-type: none;
+    padding-right: 30px;
+    color: #f2f2f2; 
+    
+}
+
+.nav-footer ul li{
+    display: inline-block;
+    padding-right: 30px;
+    color: #f2f2f2;    
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 30px;
+    color: #f2f2f2;    
+}
+
+@media screen and (max-width: 768px) {
+   
+    .titulo {
+      padding: 6rem 0;
+    }
+    
+    .titulo h1 {
+      font-size: 40px;
+      padding: 4rem 0;
+    }
+    
+    .titulo a {
+      font-size: 20px;
+      padding: 6px 15px;
+    }
+    .contenido-banner {
+          font-size: 24px;
+    }
+
+}
+
+
+
+
+
+
+

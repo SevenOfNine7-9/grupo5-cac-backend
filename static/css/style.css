@@ -228,11 +228,11 @@ table{
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    border-spacing: 2px 15px;
 }
 
 td{
-    padding: 10px;
+    padding: 5px;
+}    
 
 table a{
     display: block;

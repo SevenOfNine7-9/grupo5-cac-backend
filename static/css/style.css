@@ -228,8 +228,11 @@ table{
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    border-spacing: 2px 20px;
+    border-spacing: 2px 15px;
 }
+
+td{
+    padding: 10px;
 
 table a{
     display: block;

@@ -154,7 +154,7 @@ header{
     /*width: 100%;*/
     max-width: 90rem;
     text-align: center;
-    padding: 8rem 0;
+    padding: rem 0;
     margin: 0 auto;
     z-index: 1;
 }
@@ -228,11 +228,8 @@ table{
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
+    border-spacing: 10px
 }
-
-td{
-    padding: 5px;
-}    
 
 table a{
     display: block;
@@ -258,6 +255,8 @@ label {
 
 input[type="text"],
 input[type="number"],
+input[type="password"],
+input[type="button"],
 textarea {
     width: 90%;
     padding: 10px;
@@ -294,6 +293,19 @@ form a {
 
 form a:hover {
     background-color:   rgb(242, 201, 201);
+}
+
+#errorMessage {
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    background-color: rgb(155, 63, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: solid;
+
+
 }
 
 #app a{
@@ -406,6 +418,13 @@ a{
     }
 
 }
+
+
+
+
+
+
+
 
 
 

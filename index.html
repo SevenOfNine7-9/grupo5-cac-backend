@@ -9,7 +9,7 @@
     <link rel="icon" type="image/jpg" href="./static/imagenes/ico.jpg" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <title>Inicio</title>
+    <title>Login</title>
 </head>
 <body>
     
@@ -25,7 +25,7 @@
             &#8801;
         </label>
         <nav class="menu">
-          <a href="./index.html">Inicio</a>         
+          <a href="https://grupo5-2ambakery.netlify.app">2AM Bakery</a>         
 
             <label for="check" class="esconder-menu">&#215;</label>
         </nav>
@@ -34,29 +34,72 @@
     <div class="recetas-lista">
         <div class="card">                                      
             <div class="titulo">
-                <h4>BASE DE PRODUCTOS</h4> <br>
-                <h4> Seleccione la opción deseada:</h4> <br>
-                                   
+                <h4>INGRESO A LA BASE DE DATOS</h4> <br>
+                <h4> Ingrese su DNI y su contraseña: </h4> <br>
+                    
+                <form id="login">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required><br>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required><br> 
+                    
+                    <div class="botones">
+                        <button type="submit">Ingresar</button>
+                        <button type="reset">Restablecer</button>
+                        <button type="button">Salir</button>
+                        <br><br><br>
+                    </div> 
+                    <div id="errorMessage" style="display: none;"></div>
+                </form>                        
          
-                <table>
-                    <tr>
-                        <td class="contenedor-centrado"><a href="altas.html">Alta de productos</a></td>
-                    </tr>
-                    <tr>
-                        <td class="contenedor-centrado "><a href="listado.html">Listado de productos</a></td>
-                    </tr>
-                    <tr>
-                        <td class="contenedor-centrado "><a href="modificaciones.html">Modificar producto</a></td>
-                    </tr>
-                    <tr>
-                        <td class="contenedor-centrado "><a href="listadoEliminar.html">Eliminar producto</a></td>
-                    </tr>
-                </table> 
             </div> 
         </div>
     </div> 
     <br>
     <br>
+    <script>
+        const loginForm = document.getElementById('login');
+        const dniInput = document.getElementById('dni');
+        const passwordInput = document.getElementById('password');
+        const errorMessage = document.getElementById('errorMessage');
+        const exitButton = document.querySelector('.botones button:last-child');  
+
+        const usuarios = [
+        { dni: '11111111', password: 'usuario1' },
+        { dni: '22222222', password: 'usuario2' },
+        ];
+
+        loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+
+        const enteredDni = dniInput.value.trim();
+        const enteredPassword = passwordInput.value.trim();
+
+        const validUser = usuarios.find(user => user.dni === enteredDni && user.password === enteredPassword);
+
+        if (validUser) {
+            // Login exitoso va a la págnina Admin, dónde estan los botones para administrar Productos
+            window.location.href = './admin.html';
+        } else {
+            // login no válido, mensaje de error
+            errorMessage.textContent = 'Datos inválidos';
+            errorMessage.style.display = 'block';
+        }
+        });
+
+        loginForm.addEventListener('reset', () => {
+            errorMessage.style.display = 'none';
+            errorMessage.textContent = ''; //limpia los mensajes de error
+            errorMessage.style.display = 'none';
+            dniInput.value = '';
+            passwordInput.value = '';
+        });
+
+        
+        exitButton.addEventListener('click', () => {
+            window.close(); // cierra la página de login
+        });
+    </script>
     
 </body>
 </html>
